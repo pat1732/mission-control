@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 // OpenClaw Gateway URL
-const GATEWAY_URL = 'http://localhost:21412';
+const GATEWAY_URL = 'http://localhost:18789';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
