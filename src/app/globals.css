@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --mission-dark: #0a0e17;
+  --mission-card: #111827;
+  --mission-border: #1e293b;
+  --mission-text: #e2e8f0;
+  --mission-muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--mission-dark);
+  color: var(--mission-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mission-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mission-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glow effects */
+.glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+.glow-green { box-shadow: 0 0 20px rgba(34, 197, 94, 0.5); }
+.glow-yellow { box-shadow: 0 0 20px rgba(234, 179, 8, 0.5); }
+.glow-purple { box-shadow: 0 0 20px rgba(168, 85, 247, 0.5); }
+.glow-red { box-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
+.glow-cyan { box-shadow: 0 0 20px rgba(6, 182, 212, 0.5); }
+.glow-pink { box-shadow: 0 0 20px rgba(236, 72, 153, 0.5); }
+
+/* Status animations */
+@keyframes working-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.status-working {
+  animation: working-pulse 2s ease-in-out infinite;
+}
+
+@keyframes scanning {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.8); }
+}
+
+.status-scanning {
+  animation: scanning 1.5s ease-in-out infinite;
+}
+
+/* Pixel character base */
+.pixel-character {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
